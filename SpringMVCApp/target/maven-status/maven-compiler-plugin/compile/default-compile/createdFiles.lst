@@ -1,0 +1,8 @@
+com\springmvcapp\config\MySpringMVCDispatcherServlet.class
+com\springmvcapp\dao\PersonDAO.class
+com\springmvcapp\models\Person.class
+com\springmvcapp\service\PersonService.class
+com\springmvcapp\dao\PersonDAOHibernate.class
+com\springmvcapp\controllers\PeopleController.class
+com\springmvcapp\dao\PersonMapper.class
+com\springmvcapp\config\SpringConfig.class

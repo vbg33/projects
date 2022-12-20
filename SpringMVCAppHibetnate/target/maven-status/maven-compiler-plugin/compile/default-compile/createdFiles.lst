@@ -1,0 +1,7 @@
+org\apphibernate\controllers\MainController.class
+org\apphibernate\controllers\PeopleController.class
+org\apphibernate\service\PersonService.class
+org\apphibernate\config\SpringConfig.class
+org\apphibernate\config\MySpringMVCDispatcherServlet.class
+org\apphibernate\models\Person.class
+org\apphibernate\dao\PersonDAO.class

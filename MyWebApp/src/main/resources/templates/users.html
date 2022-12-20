@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Users</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="container-fluid text-center">
+
+    <div><h2>Spring Boot Crud приложение - Регистрация пользователей</h2></div>
+
+    <div class="m-2">
+      <a class="h3" th:href="@{/users/new}">Добавить студента</a>
+    </div>
+
+    <div th:if="${message}" class="alert alert-success text-center">
+        [[${message}]]
+    </div>
+
+    <div>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+              <tr>
+                <th>#</th>
+                <th>Имя</th>
+                <th>Фамилия</th>
+                <th>E-mail</th>
+                <th>Согласие</th>
+                <th>Действие</th>
+              </tr>
+            </thead>
+
+            <tbody>
+            <th:block th:each="user : ${listUsers}">
+              <tr>
+                <td>[[${user.id}]]</td>
+                <td>[[${user.firstName}]]</td>
+                <td>[[${user.lastName}]]</td>
+                <td>[[${user.email}]]</td>
+                <td>[[${user.enabled}]]</td>
+                <td>
+                    <a class="h6 mr-3" th:href="@{'/users/edit/'+ ${user.id}}">Изменить</a>
+                    <a class="h6" th:href="@{'/users/delete/'+ ${user.id}}">Удалить</a>
+
+                </td>
+              </tr>
+            </th:block>
+
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+</body>
+</html>
